@@ -2,4 +2,5 @@ steps:
   - name: gcr.io/cloud-builders/docker
     args: [build, --network, cloudbuild, -f, .cloud-build/Dockerfile, -t, gcr.io/$PROJECT_ID/zetasql, '.']
 options:
-  machineType: E2_HIGHCPU_32
+  machineType: E2_HIGHCPU_8
+timeout: 3600s
